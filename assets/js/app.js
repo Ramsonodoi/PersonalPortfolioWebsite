@@ -4,7 +4,7 @@ const url = document.querySelector("nav url");
 const nav = document.querySelector("nav");
 
 burger.addEventListener("click", () => {
-    ul.classList.toggle("show");
+  ul.classList.toggle("show");
 });
 
 // close hamburger menu when link is clicked
@@ -13,18 +13,28 @@ burger.addEventListener("click", () => {
 
 const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach((link)=> 
-link.addEventListener("click", ()=> {
-  ul.classList.remove("show");
-})
+navLink.forEach((link) =>
+  link.addEventListener("click", () => {
+    ul.classList.remove("show");
+  })
 );
 // scroll to top functionality
 const scrollUp = document.querySelector("#scroll-up");
 
 scrollUp.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    });
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
+
+
+
+
+/**Copyright year dynamically. */
+// Obtain the current year.
+let currentYear = new Date().getFullYear();
+
+//Insert the current year in the copyrightBar.
+document.getElementById("year-placeholder").textContent = currentYear;
