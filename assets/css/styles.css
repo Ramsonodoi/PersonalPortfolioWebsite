@@ -15,6 +15,12 @@
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
+  --text-color-third: rgb(30, 159, 171);
+  --text-color-second: rgb(68, 68, 68);
+  --first-color: rgb(110, 87, 224);
+  --first-color-hover: rgb(40, 91, 212);
+  --image-bg-color: #001ef9;
+  --second-color: rgb(0, 201, 255);
 }
 
 html {
@@ -26,7 +32,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 ul {
@@ -39,12 +44,29 @@ a {
 }
 
 a:hover {
- 
   color: var(--secondary-color);
 }
 
 body {
   font-family: var(--font-family);
+}
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn {
+  font-weight: 500;
+  padding: 12px 20px;
+  background: #efefef;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.btn > i {
+  margin-left: 10px;
+}
+.btn:hover {
+  background: var(--second-color);
+  color: var(--bg-color);
 }
 /* Navbar */
 nav {
@@ -62,13 +84,11 @@ nav {
 
 nav h1 {
   color: var(--primary-color0);
-
 }
 
 nav a {
   color: var(--primary-color);
   transition: var(--transition);
-
 }
 
 nav a:hover {
@@ -152,6 +172,19 @@ nav ul li {
   margin-bottom: 1rem;
 }
 
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.skills-group {
+  flex: 1 1 0px;
+}
+.ramson-icon {
+  cursor: pointer;
+}
+
 .icon {
   width: 11.875rem;
   height: 11.25rem;
@@ -165,6 +198,15 @@ nav ul li {
   margin: 10px;
 }
 
+.top-header {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.top-header h1 {
+  font-weight: 600;
+  color: var(--text-color-second);
+  margin-bottom: 10px;
+}
 .projects {
   background-color: var(--bg-color);
   padding: 32px 0;
@@ -173,7 +215,7 @@ nav ul li {
 
 .project-pic {
   width: 65%;
-  height: 60%; 
+  height: 60%;
 }
 
 .projects-container {
@@ -243,14 +285,14 @@ nav ul li {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
-  border:none;
+  border: none;
   border: 2px outset var(--primary-color);
   font-size: 0.875rem;
   outline: none;
 }
 
 .input-field::placeholder {
-  padding:0.5rem;
+  padding: 0.5rem;
   color: var(--primary-color);
 }
 
@@ -293,7 +335,7 @@ footer {
 }
 
 .scroll-up {
-  position:fixed;
+  position: fixed;
   right: 0.5%;
   bottom: 3%;
   cursor: pointer;
@@ -302,6 +344,135 @@ footer {
 .up-arrow {
   width: 3rem;
   height: 3rem;
+}
+
+/* ----- FEATURED BOX ----- */
+.featured-box {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  min-height: 700px;
+}
+
+/* ----- FEATURED TEXT BOX ----- */
+.featured-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 20px;
+}
+.featured-text-card span {
+  background: var(--text-color-third);
+  color: var(--bg-color);
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.featured-name {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--text-color-second);
+  margin-block: 20px;
+}
+.typedText {
+  text-transform: capitalize;
+  color: var(--text-color-third);
+}
+.featured-text-info {
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: var(--text-color-second);
+}
+.featured-text-btn {
+  display: flex;
+  gap: 20px;
+}
+.featured-text-btn > .blue-btn {
+  background: var(--first-color);
+  color: var(--bg-color);
+
+  font-size: 85%;
+  text-decoration: none;
+}
+.featured-text-btn > .blue-btn:hover {
+  background: var(--first-color-hover);
+}
+.featured-text-btn a {
+  background: #efefef;
+  color: black;
+
+  font-size: 85%;
+  text-decoration: none;
+}
+
+.social_icons {
+  display: flex;
+  margin-top: 5em;
+  gap: 30px;
+}
+
+/* ----- FEATURED IMAGE BOX ----- */
+.featured-image {
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  min-height: 80vh;
+  width: 50%;
+}
+.image {
+  margin: auto 0;
+  width: 280px;
+  height: 280px;
+  /* border-radius: 50% 40% 50% 40%; */
+  overflow: hidden;
+  animation: imgFloat 7s ease-in-out infinite;
+  background: var(--image-bg-color);
+}
+.image img {
+  width: 380px;
+
+  /*We did these modifications to the image to adjust inside the circle.*/
+  height: 430px;
+  transform: scale(0.8);
+
+  object-fit: cover;
+}
+@keyframes imgFloat {
+  50% {
+    transform: translateY(10px);
+    border-radius: 45% 55% 45% 55%;
+  }
+}
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+@media only screen and (max-width: 900px) {
+  .featured-text {
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    align-content: flex-start;
+    min-height: 60vh;
+  }
+
+  .featured-image {
+    order: 1;
+    justify-content: center;
+    min-height: 150px;
+    width: 100%;
+    margin-top: 65px;
+  }
+  .image,
+  .image img {
+    width: 150px;
+    height: 150px;
+  }
+  .image img {
+    height: 170px;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -349,7 +520,7 @@ footer {
     padding: 1rem 3.5rem;
   }
   .more-about h2 {
-    text-align:  center;
+    text-align: center;
   }
 
   .more-about p {
@@ -368,8 +539,40 @@ footer {
   .contact-form-container {
     max-width: 23.75rem;
   }
+  .featured-box {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  .featured-text {
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    align-content: flex-start;
+    min-height: 60vh;
+  }
+  .social_icons {
+    margin-top: 2em;
+  }
+  .featured-image {
+    order: 1;
+    justify-content: center;
+    min-height: 150px;
+    width: 100%;
+    margin-top: 65px;
+  }
+  .image,
+  .image img {
+    width: 150px;
+    height: 150px;
+  }
+  .image img {
+    height: 170px;
+  }
 }
 
+@media only screen and (max-width: 540px) {
+}
 @media screen and (max-width: 420px) {
   .hero img {
     height: 37.5rem;
