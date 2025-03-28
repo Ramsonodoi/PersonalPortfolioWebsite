@@ -32,9 +32,13 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <h1>RAMSON ODOI</h1>
+      <a href="#home">
+        <img
+        src="assets/icons/favicon-32x32.png"
+        loading="lazy"
+        />
+      </a>
       <ul class="navigation">
-        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -45,83 +49,200 @@
     </nav>
 
     <!-- Hero Section -->
-    <section>
-      <img src="assets/images/wfh_1.svg"
-       alt="Ramson Odoi"
-       loading="lazy"
-       class="hero-img"
-       />
-       <div class="bio animate_animated animate_shakeX">
-         <h2 class="bio-title">About Me</h2>
-         <p class="bio-text">
-I am Front-End developer with one year of hands-on experience efficiently coding websites and applications using modern HTML, CSS, React and JavaScript.  
-         </p>
-       </div>
-    </section>
+    <section class="featured-box" id="home">
+      <div class="featured-text">
+       
+        <div class="featured-name">
+          <p>I am Ramson Odoi</p>
+        </div>
+        <div class="featured-text-info">
+          <p>
+           A frontend developer with <strong>3 +</strong> years of Web development.
+          </p>
+        </div>
+        <div class="featured-text-btn">
+          <a href="#contact" class="btn blue-btn">Hire Me</a>
 
-    <!-- More about -->
-
-    <section>
-      <h2>More About Me</h2>
-      <p>
-        I am also a highly organized software engineering student seeking for a challenging entry-level position in the software industry area to actively apply the skills and academic knowledge gained to contribute to the success of a progressive organization offering opportunities for the growth in exchange for superior performance.
-      </p>
-      
+          <!--CV buttons.-->
+          <a
+            href="https://drive.google.com/file/d/1a2gfx4VrVxTTFmT9FmJIRUSQd45xt8LU/view?usp=sharing"
+            target="_blank"
+            class="btn"
+            >View Resume </a>
+        
+        </div>
+       
+      </div>
+      <div class="featured-image">
+        <div class="image">
+          <img src="assets/images/Odoi-best.jpg" alt="avatar" />
+        </div>
+      </div>
+     
     </section>
 
     <!-- Skills section -->
     <section class="skills" id="skills">
-      <h2 class="skill-header">My Top Skills</h2>
+      <h2 class="skill-header">Tech Stack</h2>
       <div class="skills-wrapper">
-        <div class="first-set animate_animated animate_pulse">
+        <div>
           <img src="assets/icons/icons8-html-5.svg"
            alt=""
            loading="lazy"
            class="icon icon-card"
           />
-
+          <h4>HTML5</h4>
+        </div>
+          
+         <div>
           <img 
           src="assets/icons/icons8-css3.svg"
           alt=""
           loading="lazy"
           class="icon icon-card"
           />
+          <h4>CSS3</h4>
+         </div>
+          <div>
+            <img 
+            src="assets/icons/icons8-tailwind-css.svg" 
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+            />
+            <h4>Tailwind CSS</h4>
+          </div>
+        </div>
+      <div class="skills-wrapper">
+        <div>
+          <img src="assets/icons/icons8-javascript.svg"
+           alt=""
+           loading="lazy"
+           class="icon icon-card"
+          />
+          <h4>JavaScript</h4>
+        </div>
+          
+         <div>
           <img 
-          src="assets/icons/icons8-javascript.svg" 
+          src="assets/icons/icons8-typescript.svg"
           alt=""
           loading="lazy"
           class="icon icon-card"
           />
+          <h4>TypeScript</h4>
+         </div>
+          <div>
+            <img 
+            src="assets/icons/icons8-react-40.svg" 
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+            />
+            <h4>React js</h4>
+          </div>
         </div>
-        <div class="second-set animate_animated animate_pulse">
-          <img 
-          src="assets/icons/icons8-react-40.svg" 
-          alt=""
-          loading="lazy"
-          class="icon-icon-card"
+      <div class="skills-wrapper">
+        <div>
+          <img src="assets/icons/nextjs-icon-svgrepo-com.svg"
+           alt=""
+           loading="lazy"
+           class="icon icon-card"
           />
+          <h4>Next js</h4>
+        </div>
+          
+         <div>
           <img 
-          src="assets/icons/icons8-java-60.svg" 
-          alt=""
-          loading="lazy"
-          class="icon-icon-card"
-          />
-          <img 
-          src="assets/icons/icons8-git.svg"
+          src="assets/icons/angular-svgrepo-com.svg"
           alt=""
           loading="lazy"
           class="icon icon-card"
           />
+          <h4>Angular</h4>
+         </div>
+          <div>
+            <img 
+            src="assets/icons/jest-svgrepo-com.svg" 
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+            />
+            <h4>Jest</h4>
+          </div>
         </div>
-       </div>
+       
       </section>
-
+      <!--Tools section-->
+      <section class="skills" id="skills">
+        <h2 class="skill-header">Tools</h2>
+        <div class="skills-wrapper">
+          <div>
+            <img src="assets/icons/jenkins-svgrepo-com.svg"
+             alt=""
+             loading="lazy"
+             class="icon icon-card"
+            />
+            <h4>Jenkins</h4>
+          </div>
+            
+           <div>
+            <img 
+            src="assets/icons/figma-svgrepo-com.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+            />
+            <h4>Figma</h4>
+           </div>
+            <div>
+              <img 
+              src="assets/icons/github-142-svgrepo-com.svg" 
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+              />
+              <h4>Github</h4>
+            </div>
+          </div>
+        <div class="skills-wrapper">
+          <div>
+            <img src="assets/icons/jira-svgrepo-com.svg"
+             alt=""
+             loading="lazy"
+             class="icon icon-card"
+            />
+            <h4>Jira</h4>
+          </div>
+            
+           <div>
+            <img 
+            src="assets/icons/postman-icon-svgrepo-com.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+            />
+            <h4>Postman</h4>
+           </div>
+            <div>
+              <img 
+              src="assets/icons/visual-studio-code-svgrepo-com.svg" 
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+              />
+              <h4>Visual Studio Code</h4>
+            </div>
+          </div>
+        
+         
+        </section>
     <!-- Projects section -->
     <section class="projects" id="projects">
-      <h2 class="project-title">Some of my Recent Projects</h2>
+      <h2 class="project-title"> Projects</h2>
       <div class="project-container project-card">
         <img 
-        src="assets/images/JavaProject Calculator1.png" 
+        src="assets/images/Calculator.PNG" 
         alt="Calculator"
         loading="lazy"
         class="project-pic"
@@ -130,20 +251,20 @@ I am Front-End developer with one year of hands-on experience efficiently coding
          <p class="project-details">
            This project was developed to help DIAPERS AHENFIE VENTURES staff workers for fast calculations due to the rampant freezing of fake casio calculators bought from a calculator store nearby.
          </p>
-        <a href="https://github.com/Ramson209/Calculator-Final-Project" target="_blank" class="project-link">Check it Out</a>
+        <a href="https://nifty-kirch-dce39a.netlify.app/" target="_blank" class="project-link">Check it Out</a>
       </div>
       <div class="project-container project-card">
         <img 
-        src="assets/images/FeatureRequestJamming.png" 
-        alt="FeatureRequestJamming"
+        src="assets/images/Quiz App.PNG" 
+        alt="Quiz App"
         loading="lazy"
         class="project-pic"
         />
-        <h3 class="project-title">FeaturedRequestJamming </h3>
+        <h3 class="project-title">Quiz App </h3>
         <p class="project-details">
-          This is a react project with Spotify API to build a website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
+          This is a react typeScript project,  a website that allows users to test their basic general knowledge skills.
         </p>
-         <a href="https://gifted-kepler-818256.netlify.app/" target="_blank" class="project-link">Check it Out</a>
+         <a href="https://snazzy-gumdrop-794943.netlify.app/" target="_blank" class="project-link">Check it Out</a>
       </div>
       <div class="project-container project-card">
         <img 
@@ -239,11 +360,11 @@ This is a HTML and CSS project website that provide the new brand of laptops nee
 </i>
     <!-- Footer section -->
 <footer>
-  <p class="copy">&copy; Copyright 2022 </p>
-    <p class="copy">
-      Built with &#x2661; by
-      <a href="" target="_blank">Ramson Odoi (KO)</a>
-    </p>
+  <p class="copy">
+    <p>Ramson | RamTech</p>
+  </p>
+  <p class="copy">RamTech&copy; All Copyright Reserved 2022 </p>
+   
 
 </footer>
     
